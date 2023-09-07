@@ -11,3 +11,12 @@ class ToggleFavoriteEvent extends MainAppEvent {
   @override
   List<Object?> get props => [];
 }
+
+class RemoveFavoriteEvent extends MainAppEvent {
+  final int index;
+
+  RemoveFavoriteEvent(this.index);
+
+  @override
+  List<Object?> get props => [index];
+}

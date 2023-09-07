@@ -11,6 +11,8 @@ class MainAppBloc extends Bloc<MainAppEvent, MainAppState> {
     on<ToggleFavoriteEvent>(_toggleFavorite);
 
     on<GetNextWordEvent>(_getNext);
+
+    on<RemoveFavoriteEvent>(_removeFavorite);
   }
 
   void _getNext(GetNextWordEvent event, Emitter emit) {
@@ -24,6 +26,11 @@ class MainAppBloc extends Bloc<MainAppEvent, MainAppState> {
     } else {
       favorites.add(current);
     }
+    emit(ToggleFavoriteState());
+  }
+
+  void _removeFavorite(RemoveFavoriteEvent event, Emitter emit) {
+    favorites.removeAt(event.index);
     emit(ToggleFavoriteState());
   }
 }
