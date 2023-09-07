@@ -5,6 +5,7 @@ void main(List<String> arguments) {
   print("Welcome to Cows and Bulls\nType 'exit' to stop the game");
   Random random = Random();
   String value = (random.nextInt(9000) + 1000).toString();
+  print(value);
   while (true) {
     print("Please choose a four digit number:");
     String? number = stdin.readLineSync();
@@ -25,7 +26,7 @@ void checkNumber(String random, String input) {
   int bulls = 0;
   for (int i = 0; i < input.length; i++) {
     if (random.contains(input[i])) {
-      if (random.indexOf(input[i]) == i) {
+      if (input[i].compareTo(random[i]) == 0) {
         cows++;
       } else {
         bulls++;
