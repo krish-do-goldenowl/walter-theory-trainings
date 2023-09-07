@@ -1,8 +1,9 @@
-import 'package:english_words/english_words.dart';
+import 'package:first_app/src/bloc/main_app_bloc.dart';
+import 'package:first_app/src/bloc/main_app_event.dart';
 import 'package:first_app/src/presentation/favorites/screen/favorites_page.dart';
 import 'package:first_app/src/presentation/generator/screen/generator_page.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,8 +14,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (context) => MyAppState(),
+    return BlocProvider(
+      create: (context) => MainAppBloc()..add(GetNextWordEvent()),
       child: MaterialApp(
         title: 'Namer App',
         debugShowCheckedModeBanner: false,
@@ -25,26 +26,6 @@ class MyApp extends StatelessWidget {
         home: const MyHomePage(),
       ),
     );
-  }
-}
-
-class MyAppState extends ChangeNotifier {
-  var current = WordPair.random();
-
-  void getNext() {
-    current = WordPair.random();
-    notifyListeners();
-  }
-
-  var favorites = <WordPair>[];
-
-  void toggleFavorite() {
-    if (favorites.contains(current)) {
-      favorites.remove(current);
-    } else {
-      favorites.add(current);
-    }
-    notifyListeners();
   }
 }
 
