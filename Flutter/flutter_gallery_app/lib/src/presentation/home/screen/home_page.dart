@@ -1,6 +1,8 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gallery_app/src/core/constants/list_gallery_item.dart';
 
+@RoutePage()
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
@@ -33,7 +35,9 @@ class HomePage extends StatelessWidget {
                 galleryItems[index].subTitle,
                 style: const TextStyle(fontSize: 16),
               ),
-              onTap: () {},
+              onTap: () {
+                context.router.pushNamed(galleryItems[index].router);
+              },
               dense: true,
             );
           },
