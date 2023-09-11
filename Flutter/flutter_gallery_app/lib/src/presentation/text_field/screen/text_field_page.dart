@@ -40,12 +40,12 @@ class _TextFieldViewState extends State<TextFieldView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text("Form view")),
-      body: optionView(),
-      bottomNavigationBar: mainView(),
+      body: _optionView(),
+      bottomNavigationBar: _mainView(),
     );
   }
 
-  Widget mainView() {
+  Widget _mainView() {
     return BlocBuilder<TextFieldBloc, TextFieldState>(
       builder: (context, state) {
         return Material(
@@ -101,7 +101,7 @@ class _TextFieldViewState extends State<TextFieldView> {
     );
   }
 
-  Widget optionView() {
+  Widget _optionView() {
     return BlocBuilder<TextFieldBloc, TextFieldState>(
       builder: (context, state) {
         return Padding(
