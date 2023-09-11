@@ -62,12 +62,12 @@ class _StackViewState extends State<StackView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text("Stack & Align")),
-      bottomNavigationBar: viewOption(),
-      body: mainView(),
+      bottomNavigationBar: _viewOption(),
+      body: _mainView(),
     );
   }
 
-  Widget mainView() {
+  Widget _mainView() {
     return BlocBuilder<StackBloc, StackState>(
       builder: (context, state) {
         return SizedBox.expand(
@@ -87,7 +87,7 @@ class _StackViewState extends State<StackView> {
     );
   }
 
-  Widget viewOption() {
+  Widget _viewOption() {
     return BlocBuilder<StackBloc, StackState>(
       builder: (context, state) {
         return Material(
