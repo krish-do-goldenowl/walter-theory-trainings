@@ -21,6 +21,12 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const ContainerPage(),
       );
     },
+    CustomBoxShapeRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const CustomBoxShapePage(),
+      );
+    },
     HomeRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -58,6 +64,20 @@ class ContainerRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'ContainerRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [CustomBoxShapePage]
+class CustomBoxShapeRoute extends PageRouteInfo<void> {
+  const CustomBoxShapeRoute({List<PageRouteInfo>? children})
+      : super(
+          CustomBoxShapeRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'CustomBoxShapeRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }
