@@ -19,7 +19,7 @@ final List<GalleryItem> galleryItems = [
     icon: Icons.menu_rounded,
     title: 'Bottom app bar',
     subTitle: 'Bottom application bar',
-    router: '/',
+    router: '/bottomAppBar',
   ),
   GalleryItem(
     icon: Icons.web_outlined,
