@@ -38,7 +38,7 @@ final List<GalleryItem> galleryItems = [
     icon: Icons.chrome_reader_mode_rounded,
     title: 'Card',
     subTitle: 'Cards with rounded corners and decoration',
-    router: '/',
+    router: '/container',
   ),
   GalleryItem(
     icon: Icons.tab_unselected_rounded,
