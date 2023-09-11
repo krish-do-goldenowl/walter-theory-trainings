@@ -70,7 +70,7 @@ final List<GalleryItem> galleryItems = [
     title: 'Stack & Align',
     subTitle:
         'BA widget that positions its children relative to the edges of its box',
-    router: '/',
+    router: '/stack',
   ),
   GalleryItem(
     icon: Icons.auto_awesome_outlined,
