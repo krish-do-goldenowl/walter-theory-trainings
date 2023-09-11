@@ -21,6 +21,12 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const HomePage(),
       );
     },
+    RowColumnRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const RowColumnPage(),
+      );
+    },
     TypographyRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -40,6 +46,20 @@ class HomeRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'HomeRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [RowColumnPage]
+class RowColumnRoute extends PageRouteInfo<void> {
+  const RowColumnRoute({List<PageRouteInfo>? children})
+      : super(
+          RowColumnRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'RowColumnRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }

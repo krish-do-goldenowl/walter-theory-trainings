@@ -57,7 +57,7 @@ final List<GalleryItem> galleryItems = [
     title: 'Row & Column',
     subTitle:
         'A widget that displays its children in a horizontal and vertical array',
-    router: '/',
+    router: '/rowColumn',
   ),
   GalleryItem(
     icon: Icons.edit_attributes_rounded,
