@@ -50,7 +50,7 @@ final List<GalleryItem> galleryItems = [
     icon: Icons.dehaze_rounded,
     title: 'Text Field',
     subTitle: 'Text Field, Text Field Form',
-    router: '/',
+    router: '/textField',
   ),
   GalleryItem(
     icon: Icons.graphic_eq_rounded,

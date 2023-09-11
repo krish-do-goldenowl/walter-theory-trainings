@@ -39,6 +39,12 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const StackPage(),
       );
     },
+    TextFieldRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const TextFieldPage(),
+      );
+    },
     TypographyRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -100,6 +106,20 @@ class StackRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'StackRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [TextFieldPage]
+class TextFieldRoute extends PageRouteInfo<void> {
+  const TextFieldRoute({List<PageRouteInfo>? children})
+      : super(
+          TextFieldRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'TextFieldRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }
