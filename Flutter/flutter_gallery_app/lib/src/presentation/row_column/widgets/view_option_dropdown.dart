@@ -7,11 +7,13 @@ class ViewOptionDropdown<T> extends StatelessWidget {
     required this.value,
     required this.items,
     required this.onChanged,
+    this.nameItems,
   });
 
   final String title;
   final Function(T? state) onChanged;
   final List<T> items;
+  final List<String>? nameItems;
   final T value;
 
   @override
@@ -24,10 +26,16 @@ class ViewOptionDropdown<T> extends StatelessWidget {
           icon: const Icon(Icons.keyboard_arrow_down_rounded),
           value: value,
           items: items
-              .map((e) => DropdownMenuItem<T>(
+              .asMap()
+              .map((index, e) => MapEntry(
+                  index,
+                  DropdownMenuItem<T>(
                     value: e,
-                    child: Text(e.toString().split(".").last),
-                  ))
+                    child: nameItems == null
+                        ? Text("$e".split(".").last)
+                        : Text(nameItems![index]),
+                  )))
+              .values
               .toList(),
           onChanged: onChanged,
         ),
