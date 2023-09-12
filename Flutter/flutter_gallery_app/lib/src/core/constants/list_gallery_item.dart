@@ -7,7 +7,7 @@ final List<GalleryItem> galleryItems = [
     title: 'Cupertino',
     subTitle:
         'Beautiful and high-fidelity widgets for current iOS design language',
-    router: '/',
+    router: '/cupertino',
   ),
   GalleryItem(
     icon: Icons.text_fields_rounded,
