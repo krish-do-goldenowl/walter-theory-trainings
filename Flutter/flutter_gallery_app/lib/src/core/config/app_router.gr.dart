@@ -21,6 +21,12 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const BottomAppBarPage(),
       );
     },
+    ButtonRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const ButtonPage(),
+      );
+    },
     ContainerRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -51,6 +57,12 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const StackPage(),
       );
     },
+    TextFieldRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const TextFieldPage(),
+      );
+    },
     TypographyRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -76,6 +88,20 @@ class BottomAppBarRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'BottomAppBarRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [ButtonPage]
+class ButtonRoute extends PageRouteInfo<void> {
+  const ButtonRoute({List<PageRouteInfo>? children})
+      : super(
+          ButtonRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'ButtonRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }
@@ -146,6 +172,20 @@ class StackRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'StackRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [TextFieldPage]
+class TextFieldRoute extends PageRouteInfo<void> {
+  const TextFieldRoute({List<PageRouteInfo>? children})
+      : super(
+          TextFieldRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'TextFieldRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }
