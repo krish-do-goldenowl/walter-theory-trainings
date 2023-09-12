@@ -32,7 +32,7 @@ final List<GalleryItem> galleryItems = [
     icon: Icons.format_list_bulleted_rounded,
     title: 'List',
     subTitle: 'Scrolling list layout',
-    router: '/',
+    router: '/imageTitleAppBarPage',
   ),
   GalleryItem(
     icon: Icons.chrome_reader_mode_rounded,
