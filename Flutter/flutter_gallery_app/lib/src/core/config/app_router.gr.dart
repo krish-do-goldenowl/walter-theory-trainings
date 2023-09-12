@@ -15,10 +15,22 @@ abstract class _$AppRouter extends RootStackRouter {
 
   @override
   final Map<String, PageFactory> pagesMap = {
+    BottomAppBarRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const BottomAppBarPage(),
+      );
+    },
     ContainerRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const ContainerPage(),
+      );
+    },
+    CustomBoxShapeRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const CustomBoxShapePage(),
       );
     },
     HomeRoute.name: (routeData) {
@@ -55,6 +67,20 @@ abstract class _$AppRouter extends RootStackRouter {
 }
 
 /// generated route for
+/// [BottomAppBarPage]
+class BottomAppBarRoute extends PageRouteInfo<void> {
+  const BottomAppBarRoute({List<PageRouteInfo>? children})
+      : super(
+          BottomAppBarRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'BottomAppBarRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
 /// [ContainerPage]
 class ContainerRoute extends PageRouteInfo<void> {
   const ContainerRoute({List<PageRouteInfo>? children})
@@ -64,6 +90,20 @@ class ContainerRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'ContainerRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [CustomBoxShapePage]
+class CustomBoxShapeRoute extends PageRouteInfo<void> {
+  const CustomBoxShapeRoute({List<PageRouteInfo>? children})
+      : super(
+          CustomBoxShapeRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'CustomBoxShapeRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }

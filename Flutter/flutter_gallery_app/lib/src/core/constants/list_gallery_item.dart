@@ -19,7 +19,7 @@ final List<GalleryItem> galleryItems = [
     icon: Icons.menu_rounded,
     title: 'Bottom app bar',
     subTitle: 'Bottom application bar',
-    router: '/',
+    router: '/bottomAppBar',
   ),
   GalleryItem(
     icon: Icons.web_outlined,
@@ -76,6 +76,6 @@ final List<GalleryItem> galleryItems = [
     icon: Icons.auto_awesome_outlined,
     title: 'Custom shape',
     subTitle: 'A ticket widget with custom shape',
-    router: '/',
+    router: '/customBoxShape',
   ),
 ];
