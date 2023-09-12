@@ -26,7 +26,7 @@ final List<GalleryItem> galleryItems = [
     title: 'Button',
     subTitle:
         'RaisedButton, FlatButton, DropdownButton, FloatingActionButton, IconButton, InkWell, RawMaterialButton, etc',
-    router: '/',
+    router: '/button',
   ),
   GalleryItem(
     icon: Icons.format_list_bulleted_rounded,
