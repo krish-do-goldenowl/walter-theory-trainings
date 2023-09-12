@@ -76,6 +76,6 @@ final List<GalleryItem> galleryItems = [
     icon: Icons.auto_awesome_outlined,
     title: 'Custom shape',
     subTitle: 'A ticket widget with custom shape',
-    router: '/',
+    router: '/customBoxShape',
   ),
 ];
