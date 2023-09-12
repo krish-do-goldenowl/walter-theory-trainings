@@ -27,6 +27,12 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const ContainerPage(),
       );
     },
+    CupertinoRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const CupertinoPage(),
+      );
+    },
     CustomBoxShapeRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -84,6 +90,20 @@ class ContainerRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'ContainerRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [CupertinoPage]
+class CupertinoRoute extends PageRouteInfo<void> {
+  const CupertinoRoute({List<PageRouteInfo>? children})
+      : super(
+          CupertinoRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'CupertinoRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }
