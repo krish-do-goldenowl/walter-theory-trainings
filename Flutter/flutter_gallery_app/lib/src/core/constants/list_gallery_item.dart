@@ -63,7 +63,7 @@ final List<GalleryItem> galleryItems = [
     icon: Icons.edit_attributes_rounded,
     title: 'Wrap & Chip',
     subTitle: 'Wrap & Chip',
-    router: '/',
+    router: '/wrap',
   ),
   GalleryItem(
     icon: Icons.copy_outlined,
