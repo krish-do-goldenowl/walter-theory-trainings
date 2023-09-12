@@ -26,7 +26,7 @@ final List<GalleryItem> galleryItems = [
     title: 'Button',
     subTitle:
         'RaisedButton, FlatButton, DropdownButton, FloatingActionButton, IconButton, InkWell, RawMaterialButton, etc',
-    router: '/',
+    router: '/button',
   ),
   GalleryItem(
     icon: Icons.format_list_bulleted_rounded,
@@ -50,7 +50,7 @@ final List<GalleryItem> galleryItems = [
     icon: Icons.dehaze_rounded,
     title: 'Text Field',
     subTitle: 'Text Field, Text Field Form',
-    router: '/',
+    router: '/textField',
   ),
   GalleryItem(
     icon: Icons.graphic_eq_rounded,
@@ -63,7 +63,7 @@ final List<GalleryItem> galleryItems = [
     icon: Icons.edit_attributes_rounded,
     title: 'Wrap & Chip',
     subTitle: 'Wrap & Chip',
-    router: '/',
+    router: '/wrap',
   ),
   GalleryItem(
     icon: Icons.copy_outlined,
