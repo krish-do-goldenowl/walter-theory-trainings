@@ -57,6 +57,12 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const TypographyPage(),
       );
     },
+    WrapRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const WrapPage(),
+      );
+    },
   };
 }
 
@@ -154,6 +160,20 @@ class TypographyRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'TypographyRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [WrapPage]
+class WrapRoute extends PageRouteInfo<void> {
+  const WrapRoute({List<PageRouteInfo>? children})
+      : super(
+          WrapRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'WrapRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }
