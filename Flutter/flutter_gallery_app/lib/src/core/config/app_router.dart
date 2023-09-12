@@ -5,6 +5,7 @@ import 'package:flutter_gallery_app/src/presentation/custom_box_shape/screen/cus
 import 'package:flutter_gallery_app/src/presentation/home/screen/home_page.dart';
 import 'package:flutter_gallery_app/src/presentation/row_column/screen/row_column_page.dart';
 import 'package:flutter_gallery_app/src/presentation/stack/screen/stack_page.dart';
+import 'package:flutter_gallery_app/src/presentation/text_field/screen/text_field_page.dart';
 import 'package:flutter_gallery_app/src/presentation/typography/screen/typography_page.dart';
 
 part 'app_router.gr.dart';
@@ -18,7 +19,8 @@ class AppRouter extends _$AppRouter {
         AutoRoute(path: '/rowColumn', page: RowColumnRoute.page),
         AutoRoute(path: '/stack', page: StackRoute.page),
         AutoRoute(path: '/container', page: ContainerRoute.page),
-        AutoRoute(path: '/customBoxShape', page: CustomBoxShapeRoute.page)
-        AutoRoute(path: '/bottomAppBar', page: BottomAppBarRoute.page)
+        AutoRoute(path: '/textField', page: TextFieldRoute.page),
+        AutoRoute(path: '/customBoxShape', page: CustomBoxShapeRoute.page),
+        AutoRoute(path: '/bottomAppBar', page: BottomAppBarRoute.page),
       ];
 }
