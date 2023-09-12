@@ -40,8 +40,12 @@ class _TextFieldViewState extends State<TextFieldView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text("Form view")),
-      body: _optionView(),
-      bottomNavigationBar: _mainView(),
+      body: Column(
+        children: [
+          Expanded(child: _optionView()),
+          _mainView(),
+        ],
+      ),
     );
   }
 
@@ -55,44 +59,9 @@ class _TextFieldViewState extends State<TextFieldView> {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                TextField(
-                  decoration: InputDecoration(
-                    hintText: isHintText ? "Hint Text" : null,
-                    label: isLableText ? const Text("Lable Text") : null,
-                    helperText: isHelpText ? "Help Text" : null,
-                    counterText: isCounterText ? "Counter Text" : null,
-                    errorText: isErrorText ? "Error Text" : null,
-                    prefix: isPrefix
-                        ? const Icon(Icons.account_circle_rounded)
-                        : null,
-                    suffix: isSuffix
-                        ? const Icon(Icons.account_circle_rounded)
-                        : null,
-                    prefixIcon: isPrefixIcon
-                        ? const Icon(Icons.account_circle_rounded)
-                        : null,
-                  ),
-                ),
+                _customTextField(),
                 const SizedBox(height: 15),
-                TextField(
-                  decoration: InputDecoration(
-                    border: const OutlineInputBorder(),
-                    hintText: isHintText ? "Hint Text" : null,
-                    label: isLableText ? const Text("Lable Text") : null,
-                    helperText: isHelpText ? "Help Text" : null,
-                    counterText: isCounterText ? "Counter Text" : null,
-                    errorText: isErrorText ? "Error Text" : null,
-                    prefix: isPrefix
-                        ? const Icon(Icons.account_circle_rounded)
-                        : null,
-                    suffix: isSuffix
-                        ? const Icon(Icons.account_circle_rounded)
-                        : null,
-                    prefixIcon: isPrefixIcon
-                        ? const Icon(Icons.account_circle_rounded)
-                        : null,
-                  ),
-                ),
+                _customTextField(true),
               ],
             ),
           ),
@@ -101,10 +70,28 @@ class _TextFieldViewState extends State<TextFieldView> {
     );
   }
 
+  Widget _customTextField([bool isOutlineInput = false]) {
+    return TextField(
+      decoration: InputDecoration(
+        border: isOutlineInput ? const OutlineInputBorder() : null,
+        hintText: isHintText ? "Hint Text" : null,
+        label: isLableText ? const Text("Lable Text") : null,
+        helperText: isHelpText ? "Help Text" : null,
+        counterText: isCounterText ? "Counter Text" : null,
+        errorText: isErrorText ? "Error Text" : null,
+        prefix: isPrefix ? const Icon(Icons.account_circle_rounded) : null,
+        suffix: isSuffix ? const Icon(Icons.account_circle_rounded) : null,
+        prefixIcon:
+            isPrefixIcon ? const Icon(Icons.account_circle_rounded) : null,
+      ),
+    );
+  }
+
   Widget _optionView() {
     return BlocBuilder<TextFieldBloc, TextFieldState>(
       builder: (context, state) {
-        return Padding(
+        return SingleChildScrollView(
+          physics: const BouncingScrollPhysics(),
           padding: const EdgeInsets.all(10),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
