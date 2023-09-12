@@ -21,6 +21,12 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const BottomAppBarPage(),
       );
     },
+    ButtonRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const ButtonPage(),
+      );
+    },
     ContainerRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -70,6 +76,20 @@ class BottomAppBarRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'BottomAppBarRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [ButtonPage]
+class ButtonRoute extends PageRouteInfo<void> {
+  const ButtonRoute({List<PageRouteInfo>? children})
+      : super(
+          ButtonRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'ButtonRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }
