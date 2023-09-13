@@ -36,26 +36,10 @@ class _ImageTitleAppBarPageState extends State<ImageTitleAppBarPage>
         physics: const BouncingScrollPhysics(),
         slivers: [
           _buildAppBar(),
+          _buildTabBar(),
           SliverToBoxAdapter(
             child: Column(
               children: [
-                SizedBox(
-                  height: 50,
-                  width: double.infinity,
-                  child: TabBar(
-                    controller: tabController,
-                    labelStyle: const TextStyle(fontWeight: FontWeight.bold),
-                    dividerColor: Colors.grey,
-                    labelColor: Colors.red,
-                    unselectedLabelColor: Colors.grey,
-                    indicatorColor: Colors.red,
-                    indicatorSize: TabBarIndicatorSize.label,
-                    tabs: const [
-                      Tab(text: "Description"),
-                      Tab(text: "Episodes")
-                    ],
-                  ),
-                ),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16),
                   child: Column(
@@ -81,6 +65,30 @@ class _ImageTitleAppBarPageState extends State<ImageTitleAppBarPage>
             ),
           ),
         ],
+      ),
+    );
+  }
+
+  Widget _buildTabBar() {
+    return SliverAppBar(
+      backgroundColor: Colors.black,
+      pinned: true,
+      centerTitle: true,
+      automaticallyImplyLeading: false,
+      expandedHeight: 0,
+      title: SizedBox(
+        height: 50,
+        width: double.infinity,
+        child: TabBar(
+          controller: tabController,
+          labelStyle: const TextStyle(fontWeight: FontWeight.bold),
+          dividerColor: Colors.grey,
+          labelColor: Colors.red,
+          unselectedLabelColor: Colors.grey,
+          indicatorColor: Colors.red,
+          indicatorSize: TabBarIndicatorSize.label,
+          tabs: const [Tab(text: "Description"), Tab(text: "Episodes")],
+        ),
       ),
     );
   }
@@ -159,7 +167,7 @@ class _ImageTitleAppBarPageState extends State<ImageTitleAppBarPage>
         ),
         const SizedBox(width: 5),
         const Text(
-          "5",
+          "5.0",
           style: TextStyle(color: Colors.white, fontSize: 16),
         ),
         IconButton(
@@ -182,7 +190,7 @@ class _ImageTitleAppBarPageState extends State<ImageTitleAppBarPage>
         ),
         const SizedBox(width: 10),
         const Text(
-          "Haotoon",
+          "Golden Owl",
           style: TextStyle(color: Colors.white),
         )
       ],
