@@ -60,6 +60,6 @@ platform :android do
     version_name = options[:version_name]
     version_code = options[:version_code]
 
-    sh "flutter build apk --build-name=#{version_name} --build-number=#{version_code}"
+    sh "flutter build apk --build-name=#{version_name} --build-number=#{version_code} --release"
   end
 end
