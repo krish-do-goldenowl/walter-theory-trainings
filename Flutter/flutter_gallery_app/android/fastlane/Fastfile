@@ -54,4 +54,12 @@ platform :android do
     #   aab: '../build/app/outputs/bundle/release/app-release.aab', 
     # )
   end
+
+  # fastlane build_custom_apk version_name:"1.0.0" version_code:100
+  lane :build_custom_apk do |options|
+    version_name = options[:version_name]
+    version_code = options[:version_code]
+
+    sh "flutter build apk --build-name=#{version_name} --build-number=#{version_code}"
+  end
 end

@@ -47,6 +47,14 @@ Deploy a new version to Firebase Distribution
 
 Deploy a new version to CH Play
 
+### android build_custom_apk
+
+```sh
+[bundle exec] fastlane android build_custom_apk
+```
+
+
+
 ----
 
 This README.md is auto-generated and will be re-generated every time [_fastlane_](https://fastlane.tools) is run.
