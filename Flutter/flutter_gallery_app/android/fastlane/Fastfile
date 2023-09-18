@@ -33,8 +33,13 @@ platform :android do
   end
 
   desc "Deploy a new version to Firebase Distribution"
-  lane :deployFirebaseDistribution do
-    sh("flutter build apk --release")
+  # fastlane deploy_firebase_distribution version_name:"1.0.0" version_code:100
+  lane :deploy_firebase_distribution do |options|
+    version_name = options[:version_name]
+    version_code = options[:version_code]
+
+    sh "flutter build apk --build-name=#{version_name} --build-number=#{version_code} --release"
+
     firebase_app_distribution(
         app: ENV["FIREBASE_APP_ID"],
         firebase_cli_token: ENV["FIREBASE_CLI_TOKEN"],
@@ -45,21 +50,13 @@ platform :android do
   end
 
   desc "Deploy a new version to CH Play"
-  lane :deployCHPlay do
+  lane :deploy_ch_play do
     sh("flutter build appbundle --release")
-    # upload_to_play_store(
-    #   track: 'internal', 
-    #   release_status: 'draft',
-    #   skip_upload_changelogs: true,
-    #   aab: '../build/app/outputs/bundle/release/app-release.aab', 
-    # )
-  end
-
-  # fastlane build_custom_apk version_name:"1.0.0" version_code:100
-  lane :build_custom_apk do |options|
-    version_name = options[:version_name]
-    version_code = options[:version_code]
-
-    sh "flutter build apk --build-name=#{version_name} --build-number=#{version_code} --release"
+    upload_to_play_store(
+      track: 'internal', 
+      release_status: 'draft',
+      skip_upload_changelogs: true,
+      aab: '../build/app/outputs/bundle/release/app-release.aab', 
+    )
   end
 end
