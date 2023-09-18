@@ -31,13 +31,21 @@ Runs all the tests
 
 Build app apk
 
-### android deploy
+### android deployFirebaseDistribution
 
 ```sh
-[bundle exec] fastlane android deploy
+[bundle exec] fastlane android deployFirebaseDistribution
 ```
 
-Deploy a new version to the Firebase Distribution
+Deploy a new version to Firebase Distribution
+
+### android deployCHPlay
+
+```sh
+[bundle exec] fastlane android deployCHPlay
+```
+
+Deploy a new version to CH Play
 
 ----
 

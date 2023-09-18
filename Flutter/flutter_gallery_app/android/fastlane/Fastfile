@@ -16,6 +16,12 @@
 default_platform(:android)
 
 platform :android do
+
+  before_all do
+    ENV["FIREBASE_CLI_TOKEN"] = "1//0e-bPssa0vzBaCgYIARAAGA4SNwF-L9IrY8pN1vDB8Q8ArQ7d8hRE046LPcmQOxrg5BO8UQ8idZSWr2BzpUNgbYOpIr-s2IkgDNA"
+    ENV["FIREBASE_APP_ID"] = "1:507110796691:android:aea6299f80f590d1fc8c66"
+  end
+
   desc "Runs all the tests"
   lane :runApp do
     sh("flutter run")
@@ -26,15 +32,26 @@ platform :android do
     sh("flutter build apk --release")
   end
 
-  desc "Deploy a new version to the Firebase Distribution"
-  lane :deploy do
+  desc "Deploy a new version to Firebase Distribution"
+  lane :deployFirebaseDistribution do
     sh("flutter build apk --release")
     firebase_app_distribution(
-        app: "1:507110796691:android:3300e51059e6bb1cfc8c66",
-        firebase_cli_token: "1//0e-bPssa0vzBaCgYIARAAGA4SNwF-L9IrY8pN1vDB8Q8ArQ7d8hRE046LPcmQOxrg5BO8UQ8idZSWr2BzpUNgbYOpIr-s2IkgDNA",
+        app: ENV["FIREBASE_APP_ID"],
+        firebase_cli_token: ENV["FIREBASE_CLI_TOKEN"],
         apk_path: "../build/app/outputs/flutter-apk/app-release.apk",
         groups: "testers",
         release_notes: "update for fastlane",
     )
+  end
+
+  desc "Deploy a new version to CH Play"
+  lane :deployCHPlay do
+    sh("flutter build appbundle --release")
+    # upload_to_play_store(
+    #   track: 'internal', 
+    #   release_status: 'draft',
+    #   skip_upload_changelogs: true,
+    #   aab: '../build/app/outputs/bundle/release/app-release.aab', 
+    # )
   end
 end

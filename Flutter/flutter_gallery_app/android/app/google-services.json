@@ -7,9 +7,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:507110796691:android:3300e51059e6bb1cfc8c66",
+        "mobilesdk_app_id": "1:507110796691:android:aea6299f80f590d1fc8c66",
         "android_client_info": {
-          "package_name": "com.example.flutter_gallery_app"
+          "package_name": "com.walter.gallery"
         }
       },
       "oauth_client": [],

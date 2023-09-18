@@ -45,17 +45,17 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions web = FirebaseOptions(
     apiKey: 'AIzaSyC74qGnEwtq59JdtPmGu3f0k1ikWK4NmdI',
-    appId: '1:507110796691:web:b5bee98ebee04d3afc8c66',
+    appId: '1:507110796691:web:916bff9ced93d703fc8c66',
     messagingSenderId: '507110796691',
     projectId: 'flutter-gallery-app-ed273',
     authDomain: 'flutter-gallery-app-ed273.firebaseapp.com',
     storageBucket: 'flutter-gallery-app-ed273.appspot.com',
-    measurementId: 'G-NRPQST0BXQ',
+    measurementId: 'G-1XDEXJXGRE',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyBLj4VCLIzpZ6tw0FpJzkaJeGxg05hIIZw',
-    appId: '1:507110796691:android:3300e51059e6bb1cfc8c66',
+    appId: '1:507110796691:android:aea6299f80f590d1fc8c66',
     messagingSenderId: '507110796691',
     projectId: 'flutter-gallery-app-ed273',
     storageBucket: 'flutter-gallery-app-ed273.appspot.com',
@@ -63,7 +63,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyCMlIQ2HOBTJ_LW5lGtqtpHV_-eUiPqki8',
-    appId: '1:507110796691:ios:28dbbc6ceab47920fc8c66',
+    appId: '1:507110796691:ios:16479a9153a9e663fc8c66',
     messagingSenderId: '507110796691',
     projectId: 'flutter-gallery-app-ed273',
     storageBucket: 'flutter-gallery-app-ed273.appspot.com',
@@ -72,7 +72,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions macos = FirebaseOptions(
     apiKey: 'AIzaSyCMlIQ2HOBTJ_LW5lGtqtpHV_-eUiPqki8',
-    appId: '1:507110796691:ios:2095bf0abbc9ce21fc8c66',
+    appId: '1:507110796691:ios:a2c3b1f561a4a5adfc8c66',
     messagingSenderId: '507110796691',
     projectId: 'flutter-gallery-app-ed273',
     storageBucket: 'flutter-gallery-app-ed273.appspot.com',
