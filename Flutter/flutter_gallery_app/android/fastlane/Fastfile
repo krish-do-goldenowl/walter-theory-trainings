@@ -50,13 +50,24 @@ platform :android do
   end
 
   desc "Deploy a new version to CH Play"
-  lane :deploy_ch_play do
-    sh("flutter build appbundle --release")
+  # fastlane deploy_ch_play version_name:"1.0.0" version_code:100
+  lane :deploy_ch_play do |options|
+    version_name = options[:version_name]
+    version_code = options[:version_code]
+
+    sh("flutter build appbundle --build-name=#{version_name} --build-number=#{version_code} --release")
+    # sh("flutter build appbundle --release")
+
     upload_to_play_store(
-      track: 'internal', 
-      release_status: 'draft',
+      track: 'beta', 
       skip_upload_changelogs: true,
+      skip_upload_apk: true,
+      skip_upload_metadata: true,
+      skip_upload_images: true,
+      skip_upload_screenshots: true,
+      package_name: "com.walter.gallery",
       aab: '../build/app/outputs/bundle/release/app-release.aab', 
+      json_key: 'ch_play.json'
     )
   end
 end
