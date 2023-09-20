@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "507110796691",
+    "project_id": "flutter-gallery-app-ed273",
+    "storage_bucket": "flutter-gallery-app-ed273.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:507110796691:android:aea6299f80f590d1fc8c66",
+        "android_client_info": {
+          "package_name": "com.walter.gallery"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLj4VCLIzpZ6tw0FpJzkaJeGxg05hIIZw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
